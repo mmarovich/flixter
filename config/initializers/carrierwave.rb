@@ -12,6 +12,10 @@ CarrierWave.configure do |config|
   } 
   # config.cache_dir = '/tmp/uploads'
   # config.root = '/public/uploads/tmp'
+  if Rails.env.development?
+    config.cache_dir = '/home/vagrant/uploads_tmp/tmp/uploads'
+    config.root = '/home/vagrant/uploads_tmp/tmp'
+  end
 end
 
 # CarrierWave.configure do |config|
